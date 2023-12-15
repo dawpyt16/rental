@@ -1,0 +1,266 @@
+body {
+    margin: auto;
+    padding: 0;
+    color: var(--color);
+    font-family: 'Open Sans', sans-serif;
+    background: var(--background);
+}
+
+body:not(.dark-mode) {
+    --background: #2f3640;
+    --color: white;
+    --background-color: rgba(30,34,41, 0.1);
+    --border: 3px solid #b7b7b9;
+    --border-bottom: 1px solid #1e2229;
+    --background-image: url('/static/logo.png');
+    --box-shadow: 0px 0px 16px -7px rgba(107, 108, 131);
+    --filter: contrast(20%) brightness(120%) blur(1px)
+}
+
+.dark-mode {
+    --background: white;
+    --color: #3b4753;
+    --background-color: rgba(241,242,246, 0.1);
+    --border: 3px solid #dcdde1;
+    --border-bottom: 1px solid #dcdde1;
+    --background-image: url('/static/logo.png');
+    --box-shadow: 0px 0px 16px -7px rgba(66, 68, 90, 1);
+    --filter: contrast(20%) brightness(180%) blur(1px)
+}
+
+.dark-mode-btn {
+    background: none;
+    border: none;
+    outline: none;
+    width: 18px;
+    height: 18px;
+    font-size: 16px;
+    color: var(--color);
+    cursor: pointer;
+}
+
+.dark-mode-btn:hover {
+    color: #74b9ff;
+    cursor: pointer;
+}
+
+/* Baner */
+.cover-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-image img {
+    width: 1000px;
+    filter: var(--filter);
+}
+
+.text-cover {
+    position: absolute;
+    text-align: center;
+    text-shadow: 0 0 20px black;
+    color: var(--color);
+}
+
+.title-of-text-cover {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.subtitle-of-text-cover {
+    font-size: 15px;
+}
+
+/* Opcje wyboru poradników, innych stron itd. */
+.choose-options-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: var(--border-bottom);
+    padding-bottom: 30px;
+    flex-direction: column;
+}
+
+.choose-option {
+    display: flex;
+    width: 800px;
+    margin: 12.5px;
+}
+
+.ad-image-choose-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 120px;
+    font-size: 60px;
+}
+
+.title-choose-option {
+    margin: 5px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.subtitle-choose-option {
+    margin: 5px;
+    padding: 10px;
+    font-size: 13px;
+    color: #798ca0;
+}
+
+/* Opcje wyboru najpopularniejszych pojazdów */
+.options-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-options-box {
+    display: flex;
+    text-align: justify;
+    justify-content: flex-start;
+    width: 800px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.popular-choose-options-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: var(--border-bottom);
+    padding-bottom: 30px;
+}
+
+.popular-choose-option {
+    display: flex;
+    align-items: center;
+    width: 700px;
+    margin: 12.5px;
+    border-radius: 8px;
+    border: var(--border);
+}
+
+.image-choose-option {
+    width: 280px;
+    height: 190px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    background-color: #3b4753;
+    background-repeat: no-repeat;
+    background-size: 280px 195px;
+}
+
+.magnifier-on-hover {
+    opacity: 0;
+    transition: 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 190px;
+}
+
+.text-magnifier-on-hover {
+    font-size: 80px;
+    color: #74b9ff;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.popular-choose-option:hover {
+    transition: 0.5s ease;
+    border-color: #74b9ff;
+}
+
+.popular-choose-option:hover .image-choose-option {
+    opacity: 0.7;
+}
+
+.popular-choose-option:hover .image-choose-option .magnifier-on-hover {
+    opacity: 1;
+}
+
+.title-choose-option {
+    padding: 7px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 10px;
+
+}
+
+.price-choose-option {
+    padding: 7px;
+    font-size: 18px;
+    margin-left: 10px;
+    color: var(--color);
+}
+
+.specs-choose-option {
+    padding: 7px;
+    font-size: 13px;
+    margin-left: 10px;
+    color: #798ca0;
+}
+
+/*  <!-- Opcje wyboru najnowszych dodanych pojazdów --> */
+.newest-choose-options-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.newest-choose-option {
+    width: 280px;
+    border: var(--border);
+    border-radius: 8px;
+    margin: 12.5px;
+}
+
+.image-newest-choose-option {
+    width: 280px;
+    height: 190px;
+    background-color: #3b4753;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 0;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    background-size: 290px 195px;
+}
+
+.new-stamp-image-newest-choose-option {
+    position: absolute;
+    color: white;
+    margin: 20px;
+    background-color: #7f8fa6;
+    border-radius: 4px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 12px;
+}
+
+.newest-choose-option:hover .image-newest-choose-option {
+    opacity: 0.7;
+}
+
+.newest-choose-option:hover .image-newest-choose-option .magnifier-on-hover {
+    opacity: 1;
+}
+
+.newest-choose-option:hover {
+    transition: 0.5s ease;
+    border-color: #74b9ff;
+}

@@ -1,0 +1,71 @@
+h1 {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.order-new-car {
+    margin: 0 auto 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.cars-info-box {
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 100%
+}
+
+table, th, td {
+    border-collapse: collapse;
+    padding: 10px 20px;
+    text-align: left;
+}
+
+th {
+    border-bottom: 2px solid;
+    border-color: var(--border-color);
+}
+
+.popular-choose-option {
+    width: 550px;
+    text-align: left;
+}
+
+.submit-order-button {
+    margin-top: 10px;
+    background-color: #3b4753;
+    color: white;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    width: 130px;
+    border: 2px solid #3b4753;
+    transition: 0.3s;
+}
+
+.submit-order-button:hover {
+    background-color: white;
+    color: #3b4753;
+    cursor: pointer;
+}
+
+#register-button {
+    width: 250px;
+    height: 45px;
+    background-color: #3b4753;
+    color: white;
+    border-radius: 40px;
+    border: 2px solid #3b4753;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#register-button:hover {
+    background-color: white;
+    color: #3b4753;
+    cursor: pointer;
+}

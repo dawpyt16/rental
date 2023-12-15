@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Rejestracja :: Car Rental</title>
+
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/header-footer.css">
+        <link rel="stylesheet" href="/css/registration.css">
+
+        <script src="/js/dark-mode.js"></script>
+
+        <!-- Ikony -->
+        <script src="https://kit.fontawesome.com/f78f0562eb.js" crossorigin="anonymous"></script>
+
+        <!-- Czcionka Open Sans Regular 400 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    </head>
+
+    <body onload="onload()" class="dark-mode">
+        <!-- Nagłówek -->
+        <div class="header-box" id="header-box-sticky">
+            <div class="logo">
+                <a href="/"><div class="image-logo"></div></a>
+            </div>
+            <div class="options-in-header">
+                <div class="text-of-options"><a href="/cars">Samochody</a></div>
+                <div class="text-of-options"><a href="/about">O nas</a></div>
+                <div class="text-of-options"><a href="/">Kontakt</a></div>
+            </div>
+            <div class="login-registration-option">
+                <div class="text-of-login-registration-options"><a href="/login">Zaloguj</a></div>
+                <div class="text-of-login-registration-options">/</div>
+                <div class="text-of-login-registration-options"><a href="#">Zarejestruj</a></div>
+                <div class="text-of-login-registration-options"><button class="dark-mode-btn" onclick="darkmode()"><i class="fa-solid fa-circle-half-stroke"></i></button></div>
+            </div>
+        </div>
+
+        <!-- Sekcja rejestracji-->
+        <div class="content-registration-box">
+            <div class="registration-section-box">
+                <h1>Załóż konto</h1>
+                <form action="/registration" method="post">
+                    <div class="top-form-half">
+                        <div class="leftSide">
+                            <label>Imię</label>
+                            <input type="text" name="first_name" required>
+                            <label>Nazwisko</label>
+                            <input type="text" name="last_name" required>
+                            <label>Login</label>
+                            <input type="text" name="login" required>
+                            <label>E-mail</label>
+                            <input type="email" name="email" required>
+                            <label>Hasło</label>
+                            <input type="password" name="password" required>
+                        </div>
+                        <div class="rightSide">
+                            <label>Miasto</label>
+                            <input type="text" name="city" required>
+                            <label>Ulica</label>
+                            <input type="text" name="street" required>
+                            <label>Nr domu/mieszkania</label>
+                            <input type="text" name="building_number" required>
+                            <label>Telefon</label>
+                            <input type="tel" pattern="[0-9]+" name="phone_number" required>
+                            <label>Data urodzenia</label>
+                            <input type="date" name="date_of_birth" required>
+                        </div>
+                    </div>
+                    <div class="bottom-form-half">
+                        <div class="content-check-boxes">
+                            <div class="check-box">
+                                <input type="checkbox" id="18plus" required>
+                                <label for="18plus">
+                                    „Oświadczam, że jestem osobą pełnoletnią i mam ukończone 18 lat.”.
+                                </label>
+                            </div>
+                            <div class="check-box">
+                                <input type="checkbox" id="statute" required>
+                                <label for="statute">
+                                    „Zapoznałem(-am) się z regulaminem wypożyczalni „CarRent” wraz z zawartą
+                                    </br>
+                                    w nim klauzulą informacyjną dotyczącą przetwarzania danych osobowych i akceptuję jego
+                                    </br>
+                                    wszystkie postanowienia.”.
+                                </label>
+                            </div>
+                        </div>
+                        <div class="submit-box">
+                            <input class="submit-registration-button" type="submit" value="Zarejestruj się">
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        <!-- Stopka -->
+        <div class="footer-box">
+            <div class="empty-box"></div>
+            <div class="options-in-footer">
+                <div class="text-option"><a href="#">Regulamin</a></div>
+                <div class="text-option"><a href="#">Polityka prywatności</a></div>
+                <div class="text-option"><a href="#">Polityka cookies</a></div>
+            </div>
+            <div class="social-options-box">
+                <div class="social-option"><a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a></div>
+                <div class="social-option"><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></div>
+                <div class="social-option"><a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a></div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="copyright-text">
+                &copy; Copyright 2023
+            </div>
+        </div>
+    </body>
+</html>

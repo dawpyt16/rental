@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Logowanie :: Car Rental</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/header-footer.css">
+    <link rel="stylesheet" href="/css/login.css">
+
+    <script src="/js/dark-mode.js"></script>
+
+    <!-- Ikony -->
+    <script src="https://kit.fontawesome.com/f78f0562eb.js" crossorigin="anonymous"></script>
+
+    <!-- Czcionka Open Sans Regular 400 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body onload="onload()" class="dark-mode">
+<!-- Nagłówek -->
+<div class="header-box" id="header-box-sticky">
+    <div class="logo">
+        <a href="/"><div class="image-logo"></div></a>
+    </div>
+    <div class="options-in-header">
+        <div class="text-of-options"><a href="/catalog">Samochody</a></div>
+        <div class="text-of-options"><a href="/about">O nas</a></div>
+        <div class="text-of-options"><a href="/">Kontakt</a></div>
+    </div>
+    <div class="login-registration-option">
+        <div class="text-of-login-registration-options"><a href="#">Zaloguj</a></div>
+        <div class="text-of-login-registration-options">/</div>
+        <div class="text-of-login-registration-options"><a href="/registration">Zarejestruj</a></div>
+        <div class="text-of-login-registration-options"><button class="dark-mode-btn" onclick="darkmode()"><i class="fa-solid fa-circle-half-stroke"></i></button></div>
+    </div>
+</div>
+
+<!-- Sekcja logowania i rejestracji-->
+<div class="login-registration-box">
+    <!-- Sekcja logowania-->
+    <div class="login-section-box">
+        <h1>Zaloguj się</h1>
+        <form action="/login" method="post">
+            <label>Login</label>
+            <input type="text" name="login" required>
+            <label>Hasło</label>
+            <input type="password" name="password" required>
+            <input class="submit-login-button" type="submit" value="Zaloguj się">
+        </form>
+    </div>
+
+    <!-- Sekcja rejestreacji-->
+    <div class="registration-section-box">
+        <h1>Nie masz konta?</h1>
+        <a href="/registration" id="registration-button">Załóż konto</a>
+    </div>
+</div>
+
+<!-- Stopka -->
+<div class="footer-box">
+    <div class="empty-box"></div>
+    <div class="options-in-footer">
+        <div class="text-option"><a href="#">Regulamin</a></div>
+        <div class="text-option"><a href="#">Polityka prywatności</a></div>
+        <div class="text-option"><a href="#">Polityka cookies</a></div>
+    </div>
+    <div class="social-options-box">
+        <div class="social-option"><a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a></div>
+        <div class="social-option"><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></div>
+        <div class="social-option"><a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a></div>
+    </div>
+</div>
+<div class="copyright">
+    <div class="copyright-text">
+        &copy; Copyright 2023
+    </div>
+</div>
+</body>
+</html>

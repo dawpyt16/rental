@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Moje wypożyczenia :: Car Rental</title>
+
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/header-footer.css">
+        <link rel="stylesheet" href="/css/rentalss.css">
+
+        <script src="/js/dark-mode.js"></script>
+
+        <!-- Ikony -->
+        <script src="https://kit.fontawesome.com/f78f0562eb.js" crossorigin="anonymous"></script>
+
+        <!-- Czcionka Open Sans Regular 400 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    </head>
+
+    <body onload="onload()" class="dark-mode">
+        <!-- Nagłówek -->
+        <div class="header-box" id="header-box-sticky">
+            <div class="logo">
+                <a href="/"><div class="image-logo"></div></a>
+            </div>
+            <div class="options-in-header">
+                <div class="text-of-options"><a href="/cars">Samochody</a></div>
+                <div class="text-of-options"><a href="/about">O nas</a></div>
+                <div class="text-of-options"><a href="/">Kontakt</a></div>
+            </div>
+            <div class="dark-mode-toggle-option">
+                <div class="text-of-login-registration-options"><button class="dark-mode-btn" onclick="darkmode()"><i class="fa-solid fa-circle-half-stroke"></i></button></div>
+            </div>
+        </div>
+
+        <h1>Wypożyczone samochody</h1>
+        <div class="order-new-car">
+            <a href="/new-rental" id="register-button">Wypożycz nowy samochód</a>
+        </div>
+        <div class="cars-info-box">
+            <table>
+                <tr>
+                    <th>Samochód</th>
+                    <th>Początek rezerwacji</th>
+                    <th>Koniec rezerwacji</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+                <% rentals.forEach(rental => { %>
+                    <tr>
+                        <td>
+                            <a>
+                                <%= rental.car_id.manufacturer %> <%= rental.car_id.model %>
+                            </a>
+                        </td>
+                        <td><%= rental.start_date %></td>
+                        <td><%= rental.end_date %></td>
+                        <td><%= rental.is_archived ? 'Archived' : 'Active' %></td>
+                        <td>
+                            <form method="post">
+                                <input type="hidden" name="rentalId" value="<%= rental._id %>">
+                                <button class="submit-order-button" type="submit">Anuluj</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }); %>
+            </table>
+        </div>
+
+        <!-- Stopka -->
+        <div class="footer-box">
+            <div class="empty-box"></div>
+            <div class="options-in-footer">
+                <div class="text-option"><a href="#">Regulamin</a></div>
+                <div class="text-option"><a href="#">Polityka prywatności</a></div>
+                <div class="text-option"><a href="#">Polityka cookies</a></div>
+            </div>
+            <div class="social-options-box">
+                <div class="social-option"><a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a></div>
+                <div class="social-option"><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></div>
+                <div class="social-option"><a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a></div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="copyright-text">
+                &copy; Copyright 2023
+            </div>
+        </div>
+    </body>
+</html>

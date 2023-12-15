@@ -1,0 +1,93 @@
+.login-registration-box {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 200px;
+}
+
+.login-section-box {
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.registration-section-box {
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+input {
+    border: 2px solid #3b4753;
+    border-radius: 20px;
+    text-decoration: none;
+    height: 35px;
+    outline: none;
+    margin-bottom: 10px;
+    padding: 0 13px;
+    transition: 0.3s;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input:focus {
+    border-color: #74b9ff;
+}
+
+label {
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 13px;
+}
+
+.submit-login-button {
+    margin-top: 10px;
+    background-color: #3b4753;
+    color: white;
+    height: 40px;
+    font-size: 16px;
+}
+
+.submit-login-button:hover {
+    background-color: white;
+    color: #3b4753;
+    cursor: pointer;
+}
+
+.registration-button {
+    margin-top: 10px;
+    background-color: white;
+    color: #3b4753;
+    height: 40px;
+    font-size: 16px;
+}
+
+.submit-registration-button:hover {
+    background-color: #3b4753;
+    color: white;
+    cursor: pointer;
+}
+
+#registration-button {
+    width: 200px;
+    height: 35px;
+    background-color: white;
+    color: #3b4753;
+    border-radius: 20px;
+    border: 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#registration-button:hover {
+    background-color: #3b4753;
+    color: white;
+    border-color: #3b4753;
+}

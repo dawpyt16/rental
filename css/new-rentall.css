@@ -1,0 +1,83 @@
+h1 {
+    margin: 40px 0 0;
+    text-align: center;
+}
+
+#rent-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#dummy-radio-input {
+    visibility: hidden;
+    position: fixed;
+}
+
+#dummy-radio-input:checked + .popular-choose-option {
+    border-color: #4d99e6;
+}
+
+.popular-choose-options-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.popular-choose-option {
+    width: 500px;
+}
+
+.popular-choose-option:hover {
+    cursor: pointer;
+}
+
+.input-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.choose-date-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.choose-date-box input {
+    width: 200px;
+    border: 2px solid #3b4753;
+    border-radius: 20px;
+    text-decoration: none;
+    height: 35px;
+    outline: none;
+    margin-bottom: 10px;
+    padding: 0 13px;
+    transition: 0.3s;
+}
+
+.choose-date-box input:focus {
+    border-color: #74b9ff;
+}
+
+.submit-order-button {
+    margin: 10px 0 50px;
+    width: 200px;
+    height: 45px;
+    background-color: #3b4753;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 40px;
+    border: 2px solid #3b4753;
+    transition: 0.3s;
+}
+
+.submit-order-button:hover {
+    background-color: white;
+    color: #3b4753;
+    cursor: pointer;
+}

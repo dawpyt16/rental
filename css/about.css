@@ -1,0 +1,16 @@
+.about-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.text-about-box {
+    width: 1000px;
+}
+
+li {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}

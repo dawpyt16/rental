@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Katalog :: Car Rental</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/header-footer.css">
+    <link rel="stylesheet" href="/css/about.css">
+
+    <script src="/js/dark-mode.js"></script>
+
+    <!-- Ikony -->
+    <script src="https://kit.fontawesome.com/f78f0562eb.js" crossorigin="anonymous"></script>
+
+    <!-- Czcionka Open Sans Regular 400 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .car-list-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .car-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .car-tile {
+            width: 80%;
+            display: flex;
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .car-tile:hover {
+            background-color: #f5f5f5;
+        }
+
+        .car-image {
+            width: 50%;
+            border-radius: 8px;
+        }
+
+        .car-details {
+            flex: 1;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        h3,
+        p {
+            font-size: 24px;
+            margin: 5px 0;
+        }
+
+        .car-price {
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+
+<body onload="onload()" class="dark-mode">
+<!-- Nagłówek -->
+<div class="header-box" id="header-box-sticky">
+    <div class="logo">
+        <a href="/"><div class="image-logo"></div></a>
+    </div>
+    <div class="options-in-header">
+        <div class="text-of-options"><a href="#">Samochody</a></div>
+        <div class="text-of-options"><a href="/">O nas</a></div>
+        <div class="text-of-options"><a href="/">Kontakt</a></div>
+    </div>
+    <div class="login-registration-option">
+        <div class="text-of-login-registration-options"><a href="/login">Zaloguj</a></div>
+        <div class="text-of-login-registration-options">/</div>
+        <div class="text-of-login-registration-options"><a href="/registration">Zarejestruj</a></div>
+        <div class="text-of-login-registration-options"><button class="dark-mode-btn" onclick="darkmode()"><i class="fa-solid fa-circle-half-stroke"></i></button></div>
+    </div>
+</div>
+
+<!-- Katalog samochodów-->
+<div class="popular-choose-options-box" style="margin-top: 30px; border-bottom: none;">
+    <h1 class="m-0 text-center">Lista Samochodów</h1>
+    <ul class="car-list">
+        <% cars.forEach(car => { %>
+            <li onclick="redirectToDetails('<%= car._id %>')">
+                <div class="car-tile">
+                    <img class="car-image" src="/static/civic_full.jpg" alt="<%= car.model %>">
+                    <div class="car-details">
+                        <h3><%= car.manufacturer %> <%= car.model %></h3>
+                        <p class="car-price">Koszt wypożyczenia: <%= car.rental_value %></p>
+                    </div>
+                </div>
+            </li>
+        <% }); %>
+    </ul>
+</div>
+
+<!-- Stopka -->
+<div class="footer-box">
+    <div class="empty-box"></div>
+    <div class="options-in-footer">
+        <div class="text-option"><a href="#">Regulamin</a></div>
+        <div class="text-option"><a href="#">Polityka prywatności</a></div>
+        <div class="text-option"><a href="#">Polityka cookies</a></div>
+    </div>
+    <div class="social-options-box">
+        <div class="social-option"><a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a></div>
+        <div class="social-option"><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></div>
+        <div class="social-option"><a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a></div>
+    </div>
+</div>
+<div class="copyright">
+    <div class="copyright-text">
+        &copy; Copyright 2023
+    </div>
+</div>
+<script>
+    function redirectToDetails(carId) {
+        window.location.href = '/cars/details/' + carId;
+    }
+</script>
+</body>
+</html>
